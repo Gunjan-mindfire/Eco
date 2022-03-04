@@ -261,7 +261,7 @@ console.log( uploadPreSignedUrl,downloadPreSignedUrl );
         dataType: 'json',
         success: function (data) {
           console.log(data)
-          document.getElementById("Updated_DP").innerHTML="<img src="+data[0].link+" style='width:100%'>"
+          document.getElementById("Updated_DP").innerHTML="<img src="+data.link+" style='width:100%'>"
         }
       });
 
