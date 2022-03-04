@@ -14,4 +14,5 @@ urlpatterns = [
     # path('s3Get/', views.s3Get, name='s3Get'),
     # path('s3Update/', views.s3Update, name='s3Update'),
     path('s3Image/', Image.as_view(), name='Image'),
+    path('', index, name='index'),
 ]

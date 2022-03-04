@@ -15,8 +15,19 @@ from userProfile.serializers import s3ImagesSerializer
 from EcoMail import settings
 
 
+from silk.profiling.profiler import silk_profile
+
+
+import logging
+logger = logging.getLogger(__name__)
+
 # Create your views here.
+def index(request):
+    return render(request, 'base.html' )
+
+@silk_profile(name='Register Page')
 def registerUser(request):
+    
     context = {
         'poolId': settings.userPoolId,
         'clientId':settings.clientId

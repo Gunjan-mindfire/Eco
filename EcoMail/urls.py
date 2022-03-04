@@ -21,3 +21,4 @@ urlpatterns = [
     path('', include('userProfile.urls')),
     path('mails/', include('send_scheduled_mail.urls')),
 ]
+urlpatterns += [path('silk/', include('silk.urls', namespace='silk'))]
