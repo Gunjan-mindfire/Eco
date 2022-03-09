@@ -69,7 +69,7 @@
                     var accessToken = result.getAccessToken().getJwtToken();
                     console.log(accessToken)
                     if(accessToken != null){
-                        window.location.href='http://127.0.0.1:8000/schedule-Mail/';
+                        window.location.href='{{URL}}/schedule-Mail/';
                     }
 
                     /* Use the idToken for Logins Map when Federating User Pools with identity pools or when passing through an Authorization Header to an API Gateway Authorizer */

@@ -202,4 +202,6 @@ Bucket = config('Bucket')
 
 SILKY_PYTHON_PROFILER = True
 
+URL = config('URL')
+
 

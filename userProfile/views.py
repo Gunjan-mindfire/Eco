@@ -23,28 +23,34 @@ logger = logging.getLogger(__name__)
 
 # Create your views here.
 def index(request):
-    return render(request, 'base.html' )
+    context = {
+        'URL': settings.URL
+    }
+    return render(request, 'base.html', context )
 
 @silk_profile(name='Register Page')
 def registerUser(request):
     
     context = {
         'poolId': settings.userPoolId,
-        'clientId':settings.clientId
+        'clientId':settings.clientId,
+        'URL': settings.URL
     }
     return render(request, 'register.html', context)
 
 def login(request):
     context = {
         'poolId': settings.userPoolId,
-        'clientId':settings.clientId
+        'clientId':settings.clientId,
+        'URL': settings.URL
     }
     return render(request, 'login.html', context )
 
 def schedule(request):
     context = {
         'poolId': settings.userPoolId,
-        'clientId':settings.clientId
+        'clientId':settings.clientId,
+        'URL': settings.URL
     }
     return render(request, 'schedule.html', context)
 
@@ -54,7 +60,8 @@ def profile(request):
         'clientId':settings.clientId,
         'accessKeyId':settings.accessKeyId,
         'secretAccessKey':settings.secretAccessKey,
-        'Bucket':settings.Bucket
+        'Bucket':settings.Bucket,
+        'URL': settings.URL
     }
     return render(request, 'profile.html',context)
 
