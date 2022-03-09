@@ -118,7 +118,7 @@ a {
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-12 col-xl-5">
           <div class="card bg-dark text-white mt-1" style="border-radius: 1rem;">
-            <a href="http://127.0.0.1:8000/schedule-Mail/">Schedule your mail now </a>
+            <a href="{{URL}}/schedule-Mail/">Schedule your mail now </a>
               <div class="mb-md-5 mt-md-4 pb-5">
                 <div class="card-body">
                   <div class="font-user" >
@@ -192,7 +192,7 @@ window.onload = function(){
               }
             });
     }else{
-        window.location.href='http://127.0.0.1:8000/register/';
+        window.location.href='{{URL}}/register/';
     }
 }
 // Upload DP
@@ -271,7 +271,7 @@ console.log( uploadPreSignedUrl,downloadPreSignedUrl );
 function signOut(){
     if(cognitoUser !=null){
         cognitoUser.signOut();
-        window.location.href='http://127.0.0.1:8000/login/';
+        window.location.href='{{URL}}/login/';
     }
 }    
 
